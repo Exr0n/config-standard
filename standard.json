@@ -1,0 +1,19 @@
+{
+  "name": "Pink Matter basic usability standard",
+  "version": 1,
+  "settings": [
+    {
+      "id": "karabiner.caps-lock-to-left-control",
+      "platform": "macOS",
+      "description": "Map Caps Lock to Left Control in the selected Karabiner profile.",
+      "from": {
+        "key_code": "caps_lock"
+      },
+      "to": [
+        {
+          "key_code": "left_control"
+        }
+      ]
+    }
+  ]
+}
