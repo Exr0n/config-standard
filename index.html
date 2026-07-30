@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The public Pink Matter usability baseline for macOS.">
-    <title>Pink Matter Standard</title>
+    <meta name="description" content="The public Pink Matter computer configuration standard.">
+    <title>Pink Matter Configuration Standard</title>
     <style>
       :root {
         color-scheme: light dark;
@@ -100,19 +100,23 @@
   <body>
     <main>
       <div class="eyebrow">Pink Matter · macOS</div>
-      <h1>Basic usability, standardized.</h1>
+      <h1>The setup, addressable.</h1>
       <p class="lede">
-        A small, public, versioned baseline for the keyboard and interaction
-        choices shared across Pink Matter Macs.
+        A public, versioned catalog of the complete Pink Matter computer setup.
+        Point people or coding agents to one stable standard ID at a time.
       </p>
 
       <section>
-        <h2>Standard v1</h2>
+        <h2><code>macos.keyboard.caps-control-escape</code></h2>
         <div class="setting">
           <kbd>Caps Lock</kbd>
-          <span>→</span>
+          <span>⇄</span>
           <kbd>Control</kbd>
         </div>
+        <p>
+          macOS owns the modifier swap. Karabiner adds only one overlay:
+          tapping the remapped Control key alone emits Escape.
+        </p>
       </section>
 
       <section>
@@ -120,7 +124,7 @@
         <p>Review the public repository, then run:</p>
         <pre><code>git clone https://github.com/Exr0n/config-standard.git
 cd config-standard
-./install.sh</code></pre>
+./install.sh macos.keyboard.caps-control-escape</code></pre>
       </section>
 
       <section>

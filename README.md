@@ -1,37 +1,45 @@
-# Pink Matter basic usability standard
+# Pink Matter configuration standard
 
-A small, versioned, public baseline for Pink Matter Macs.
+A public, versioned catalog describing the full Pink Matter computer setup.
+Every behavior has a stable ID so a person or coding agent can install one
+specific standard without applying unrelated choices.
 
-Current standard (v1):
+## Catalog
 
-- macOS / Karabiner-Elements: **Caps Lock → Left Control**
+| Standard ID | Behavior |
+| --- | --- |
+| `macos.keyboard.caps-control-escape` | macOS swaps Caps Lock ↔ Control; Karabiner adds tap-for-Escape only |
 
-## Install
+The machine-readable catalog is [`standard.json`](standard.json). Detailed
+instructions live under [`standards/`](standards/).
 
-Review the repository, then run:
+## Install one standard
+
+Review the repository, then run the exact ID:
 
 ```sh
 git clone https://github.com/Exr0n/config-standard.git
 cd config-standard
-./install.sh
+./install.sh macos.keyboard.caps-control-escape
 ```
 
-The installer:
+List the IDs supported by the installer:
 
-- changes only the selected Karabiner profile;
-- removes only conflicting Caps Lock source mappings in that profile;
-- preserves unrelated and device-specific mappings;
-- validates the resulting JSON; and
-- writes a timestamped backup under
-  `~/Library/Application Support/PinkMatterStandard/backups/`.
+```sh
+./install.sh list
+```
 
 For delegated installation, give a coding agent
-[`AGENT-INSTRUCTIONS.md`](AGENT-INSTRUCTIONS.md).
+[`AGENT-INSTRUCTIONS.md`](AGENT-INSTRUCTIONS.md) and name the exact standard ID.
 
-## Scope
+## Design rules
 
-Only broadly applicable Pink Matter usability settings belong here. Personal
-machine behavior, credentials, host aliases, and private infrastructure do not.
+- Document the complete behavior, including which operating-system or app layer
+  owns each part.
+- Keep standards independently addressable.
+- Preserve unrelated user configuration.
+- Never publish credentials, private infrastructure, host aliases, or personal
+  machine behavior.
 
 ## License
 
