@@ -11,8 +11,8 @@ Current standard (v1):
 Review the repository, then run:
 
 ```sh
-git clone https://github.com/Exr0n/pink-matter-standard.git
-cd pink-matter-standard
+git clone https://github.com/Exr0n/config-standard.git
+cd config-standard
 ./install.sh
 ```
 
